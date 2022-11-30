@@ -270,10 +270,14 @@ Each developer chooses a task he wants to work on and assigns it to themselves. 
 It is the penultimate event of the sprint
 
 - The team presents the work carried out during the spring to the PO and customers
+
 - The entire scrum team and stakeholders participate in this sprint review
+
 - Live demonstration of the product
+
 - Customers give feedback on the new features delivered and discuss needs or adjusts of priorities
-- 
+
+  
 
 ###### Sprint Retrospective
 
@@ -293,7 +297,7 @@ The last scrum event
 
 It is not part of the official scrum events, but can be used.
 
-- Clafiry the elements of the backlog so the team is ready to enter the next sprint
+- Clarify the elements of the backlog so the team is ready to enter the next sprint
 - The entire scrum team participates
 - Refine the product backlog, ensure the backlog items are discussed and understood
 - The PO updates the backlog before the session
@@ -309,6 +313,8 @@ The goal was to avoid producing large quantities continuously, but to produce ac
 The tasks are distributed in a table according to their status (to do, in progress, validation, finished). It is visual, which promotes collaboration, making easy to spot blocking points.
 
 Kanban differs from Scrum by its simplicity.
+
+
 
 ###### 4 principles of Kanban
 
