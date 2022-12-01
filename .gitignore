@@ -1,3 +1,4 @@
 ignorethis.txt
 .bash_profile
 ++.txt
+*.orig
