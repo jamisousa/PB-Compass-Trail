@@ -7,7 +7,7 @@
 
 # THANKS
 
-    Lorem ipsum
+    Lorem ipsum Lorem ipsum Lorem ipsum
 
 # TECHNOLOGY COLOPHON
 
