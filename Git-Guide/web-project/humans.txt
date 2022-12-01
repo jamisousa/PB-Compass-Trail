@@ -3,7 +3,7 @@
 
 # TEAM
 
-    Jamile de Sousa
+    Jamile de Sousa -- Lorem
 
 # THANKS
 
