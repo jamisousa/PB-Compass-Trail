@@ -148,11 +148,26 @@
             <section id="contactme">
                 <h2>Contact me</h2>
                 <form action="formtesting.html">
-                    <label for="name">Name</label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                    
+                    <p>  
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </p>
+
+                    <p>
                     <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" placeholder="E-mail">
+                    <input type="text" id="email" name="email" required>
+                    </p>
+
+                    <p>
+                        <label for="reason">Reason of contact</label>
+                        <select id="reason">
+                            <option value="lorem">Lorem</option>
+                            <option value="ipsum">Ipsum</option>
+                        </select>
+                    </p>
+
+                    <button type="submit">Send</button>
+                    
                 </form>
             </section>
 
