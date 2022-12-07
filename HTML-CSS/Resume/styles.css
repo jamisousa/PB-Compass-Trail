@@ -1,3 +1,20 @@
-*{
-    font-weight: 100;
+[class~='resume-list']{
+    font-style: italic;
+}
+
+
+#skills{
+    font-weight: bold;
+}
+
+.resume-list{
+    color: rgb(169, 95, 134);
+}
+
+h1.test{
+    color: rgb(84, 121, 153);
+}
+
+ul.resume-list, ol{
+    background-color: #EBEBEB;
 }
