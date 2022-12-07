@@ -18,3 +18,23 @@ h1.test{
 ul.resume-list, ol{
     background-color: #EBEBEB;
 }
+
+/*descendant*/
+table thead{
+    background-color: rgb(239, 203, 219);
+}
+
+/*child & descendant*/
+form > p, fieldset label{
+    background-color: rgb(238, 217, 217);
+}
+
+/*next-sibling*/
+h2 + address {
+    font-size: 10px;
+}
+
+/*subsequent sibling*/
+h2 ~ blockquote{
+    font-size: 25px;
+}
