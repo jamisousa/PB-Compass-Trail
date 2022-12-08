@@ -100,3 +100,7 @@ main{
     padding: 0;
 }
 
+nav{
+    position:sticky;
+    top:0;
+}
