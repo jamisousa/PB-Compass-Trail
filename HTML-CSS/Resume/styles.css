@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 [class~='resume-list']{
     font-style: italic;
 }
@@ -73,4 +77,26 @@ a:where(:hover){
     background-color: rgb(214, 190, 231);
 }
 
+#testimonials blockquote{
+    border: solid 1px rgb(176, 106, 182);
+    padding: 0.8rem;
+    margin:1rem;
+}
+
+main{
+    max-width: clamp(700px,50%,900px);
+    padding: 2rem;
+    margin:  auto;
+    border: solid 0.1rem black;
+}
+
+.resume-fieldset{
+    border:none;
+    margin:0;
+    padding:0;
+}
+
+.resume-fieldset legend{
+    padding: 0;
+}
 
