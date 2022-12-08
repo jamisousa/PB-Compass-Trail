@@ -12,7 +12,7 @@
 }
 
 h1.test{
-    color: rgb(84, 121, 153);
+    color: rgb(127, 76, 124);
 }
 
 ul.resume-list, ol{
@@ -37,4 +37,30 @@ h2 + address {
 /*subsequent sibling*/
 h2 ~ blockquote{
     font-size: 25px;
+}
+
+/*pseudo classes*/
+li:nth-child(2n+1){
+    background-color: rgb(239, 225, 230);
+}
+
+#aboutme p:nth-of-type(odd){
+    background-color: rgb(223, 223, 223);
+}
+
+a:visited{
+    color:rgb(222, 67, 162);
+}
+
+a:hover{
+    color: black;
+}
+
+section:not(#testimonials){
+    font-style: italic;
+}
+
+
+h2::first-letter{
+    color: rgb(174, 20, 115);
 }
