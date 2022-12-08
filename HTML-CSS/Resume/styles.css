@@ -103,4 +103,44 @@ main{
 nav{
     position:sticky;
     top:0;
+    z-index:3;
+    background-color: white;
+}
+
+/*z-index testing*/
+
+/**
+nav ul{
+    z-index:1;
+}
+
+
+blockquote:first-of-type{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: white;
+
+}
+
+#testimonials{
+    isolation: isolate;
+    z-index: 15;
+}
+
+**/
+
+#test-img{
+    position: absolute;
+    top: 30%;
+    right: 30%;
+}
+
+form > p label{
+    display: block;
+    margin: 0.50em;
+}
+
+input,textarea,select{
+    margin: 0.50em;
 }
