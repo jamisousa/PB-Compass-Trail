@@ -64,3 +64,13 @@ section:not(#testimonials){
 h2::first-letter{
     color: rgb(174, 20, 115);
 }
+
+:is(ul.resume-list,ol) li{
+    outline: solid 1px rgb(155, 156, 208);
+}
+
+a:where(:hover){
+    background-color: rgb(214, 190, 231);
+}
+
+
