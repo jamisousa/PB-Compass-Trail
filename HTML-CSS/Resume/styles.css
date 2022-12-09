@@ -2,12 +2,13 @@
     box-sizing: border-box;
 }
 
-/*
+
 body{
-    writing-mode: vertical-lr;
-    text-orientation: upright;
+    display: grid;
+    margin-inline: 0;
+    margin-block: 0;
 }
-*/
+
 
 [class~='resume-list']{
     font-style: italic;
@@ -60,7 +61,7 @@ li:nth-child(2n+1){
     flex-wrap: wrap;
     padding-inline: 0.8em;
     padding-block: 0;
-    background-color: rgb(248, 213, 231);
+    background-color: rgb(245, 202, 224);
 }
 
 a:visited{
@@ -95,12 +96,23 @@ a:where(:hover){
 }
 
 main{
-    max-width: clamp(700px,50%,900px);
-    padding-inline: 2rem;
     padding-block: 0;
-    margin-inline: auto;
     margin-block: 0;
-    border: solid 0.1rem black;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+}
+
+main > *{
+    grid-column: 2;
+}
+
+.full-bleed{
+    grid-column: 1 / span 3;
+    
+}
+
+.full-bleed > *{
+    padding-inline: 2rem;
 }
 
 .resume-fieldset{
@@ -127,7 +139,7 @@ nav{
 }
 
 nav ul li{
-    display: inline;
+    display: inline-flex;
     margin-inline: 0.35em;
     margin-block:0;
 }
@@ -174,10 +186,26 @@ input,textarea,select{
 }
 
 #portfolio{
-    display: block;
-    box-sizing: border-box;
+    display: grid;
+    grid-template: repeat(2,1fr) / repeat(5,1fr);
+    grid-gap:10px;
+    grid-template-areas: "portfolio anchor img1 img2 img3"
+                          "portfolio anchor img4 img5 img6";
+    grid-auto-flow: column;
+    grid-auto-columns: 50px;
 }
 
+#portfolio img{
+    max-inline-size: 100%;
+}
+
+#portfolio h2{
+    grid-area: portfolio;
+}
+
+img.anchor{
+    grid-row: anchor;
+}
 
 .flex-header{
     flex-basis:100%;
