@@ -14,6 +14,7 @@
             <li><a href="#aboutme">About me</a></li>
             <li><a href="#services">Services</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#history">Work history</a></li>
             <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#mailing">Mailing Address</a></li>
@@ -39,12 +40,13 @@
         </section>
         <!-- End of Resume section -->
         
-        
         <!-- Start of About Me  article-->
         <article id="aboutme">
-            <header>
+            <header class="flex-header">
                 <h2>About me</h2>
             </header>
+            
+            <img id="test-img" src="https://picsum.photos/200" alt="Randomized image">
             
             <p>Hi! My name is Jamile!</p>
             <p>Lorem ipsum dolor sit, amet <strong>consectetur</strong> <small>adipisicing</small> elit. </p>
@@ -87,6 +89,17 @@
         </section>
         <!-- End of Skills section-->
         
+        <!--Start of portfolio-->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            <img class="port-img" src="https://picsum.photos/200" alt="Randomized image">
+            
+        </section>
         
         <!--Start of Work History section-->
         <section id="history">
@@ -128,9 +141,9 @@
         <!-- Start of Testimonials section-->
         <section id="testimonials">
             
-            <h2>Testimonials</h2>
+            <h2 class="flex-header">Testimonials</h2>
             
-            <blockquote><p>Lorem, ipsum dolor sit amet <i>consectetur</i> adipisicing elit.</p></blockquote>
+            <blockquote><p>Lorem!! Ipsum dolor sit amet <i>consectetur</i> adipisicing elit.</p></blockquote>
             <blockquote><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p></blockquote>
         </section>
         
@@ -173,7 +186,7 @@
                     <textarea id="comments" name="comments" rows="3"></textarea>
                 </p>
                 
-                <fieldset>
+                <fieldset class="resume-fieldset">
                     <legend>Best contact time</legend>
                     
                     <label for="morning">Morning</label>

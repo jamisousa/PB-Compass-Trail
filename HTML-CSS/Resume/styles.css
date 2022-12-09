@@ -1,3 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
+/*
+body{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+*/
+
 [class~='resume-list']{
     font-style: italic;
 }
@@ -13,10 +24,6 @@
 
 h1.test{
     color: rgb(127, 76, 124);
-}
-
-ul.resume-list, ol{
-    background-color: #EBEBEB;
 }
 
 /*descendant*/
@@ -48,6 +55,14 @@ li:nth-child(2n+1){
     background-color: rgb(223, 223, 223);
 }
 
+#aboutme{
+    display: flexbox;
+    flex-wrap: wrap;
+    padding-inline: 0.8em;
+    padding-block: 0;
+    background-color: rgb(248, 213, 231);
+}
+
 a:visited{
     color:rgb(222, 67, 162);
 }
@@ -64,3 +79,107 @@ section:not(#testimonials){
 h2::first-letter{
     color: rgb(174, 20, 115);
 }
+
+:is(ul.resume-list,ol) li{
+    outline: solid 1px rgb(155, 156, 208);
+}
+
+a:where(:hover){
+    background-color: rgb(214, 190, 231);
+}
+
+#testimonials blockquote{
+    border: solid 1px rgb(176, 106, 182);
+    padding: 0.8rem;
+    margin:1rem;
+}
+
+main{
+    max-width: clamp(700px,50%,900px);
+    padding-inline: 2rem;
+    padding-block: 0;
+    margin-inline: auto;
+    margin-block: 0;
+    border: solid 0.1rem black;
+}
+
+.resume-fieldset{
+    border:none;
+    margin-inline:0;
+    margin-block: 0;
+    padding-inline:0;
+    padding-block: 0;
+}
+
+.resume-fieldset legend{
+    padding-inline: 0;
+    padding-block: 0;
+}
+
+nav{
+    position:sticky;
+    top: 0;
+    z-index:3;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin-inline: 0.35em;
+    margin-block:0;
+}
+
+/*z-index testing*/
+
+/**
+nav ul{
+    z-index:1;
+}
+
+
+blockquote:first-of-type{
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color: white;
+
+}
+
+#testimonials{
+    isolation: isolate;
+    z-index: 15;
+}
+
+**/
+
+#testimonials{
+    display: column;
+}
+
+#test-img{
+    float: inline-start;
+}
+
+form > p label{
+    display: block;
+    margin-inline: 0.50em;
+    margin-block: 0;
+}
+
+input,textarea,select{
+    margin: 0.50em;
+}
+
+#portfolio{
+    display: block;
+    box-sizing: border-box;
+}
+
+
+.flex-header{
+    flex-basis:100%;
+}
+
