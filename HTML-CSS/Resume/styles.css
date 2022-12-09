@@ -2,6 +2,13 @@
     box-sizing: border-box;
 }
 
+/*
+body{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
+*/
+
 [class~='resume-list']{
     font-style: italic;
 }
@@ -17,10 +24,6 @@
 
 h1.test{
     color: rgb(127, 76, 124);
-}
-
-ul.resume-list, ol{
-    background-color: #EBEBEB;
 }
 
 /*descendant*/
@@ -50,6 +53,14 @@ li:nth-child(2n+1){
 
 #aboutme p:nth-of-type(odd){
     background-color: rgb(223, 223, 223);
+}
+
+#aboutme{
+    display: flexbox;
+    flex-wrap: wrap;
+    padding-inline: 0.8em;
+    padding-block: 0;
+    background-color: rgb(248, 213, 231);
 }
 
 a:visited{
@@ -85,26 +96,40 @@ a:where(:hover){
 
 main{
     max-width: clamp(700px,50%,900px);
-    padding: 2rem;
-    margin:  auto;
+    padding-inline: 2rem;
+    padding-block: 0;
+    margin-inline: auto;
+    margin-block: 0;
     border: solid 0.1rem black;
 }
 
 .resume-fieldset{
     border:none;
-    margin:0;
-    padding:0;
+    margin-inline:0;
+    margin-block: 0;
+    padding-inline:0;
+    padding-block: 0;
 }
 
 .resume-fieldset legend{
-    padding: 0;
+    padding-inline: 0;
+    padding-block: 0;
 }
 
 nav{
     position:sticky;
-    top:0;
+    top: 0;
     z-index:3;
     background-color: white;
+    display: flex;
+    justify-content: center;
+    padding-inline: 0;
+}
+
+nav ul li{
+    display: inline;
+    margin-inline: 0.35em;
+    margin-block:0;
 }
 
 /*z-index testing*/
@@ -130,17 +155,31 @@ blockquote:first-of-type{
 
 **/
 
+#testimonials{
+    display: column;
+}
+
 #test-img{
-    position: absolute;
-    top: 30%;
-    right: 30%;
+    float: inline-start;
 }
 
 form > p label{
     display: block;
-    margin: 0.50em;
+    margin-inline: 0.50em;
+    margin-block: 0;
 }
 
 input,textarea,select{
     margin: 0.50em;
 }
+
+#portfolio{
+    display: block;
+    box-sizing: border-box;
+}
+
+
+.flex-header{
+    flex-basis:100%;
+}
+
