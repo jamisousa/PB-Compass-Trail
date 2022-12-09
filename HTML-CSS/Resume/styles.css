@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 
 body{
-    display: grid;
-    margin-inline: 0;
-    margin-block: 0;
+    display: block;
 }
 
 
+/*
 [class~='resume-list']{
     font-style: italic;
 }
-
+*/
 
 #skills{
     font-weight: bold;
@@ -28,14 +30,15 @@ h1.test{
 }
 
 /*descendant*/
-table thead{
+/* table thead{
     background-color: rgb(239, 203, 219);
-}
+} */
 
-/*child & descendant*/
+/*child & descendant
 form > p, fieldset label{
     background-color: rgb(238, 217, 217);
 }
+*/
 
 /*next-sibling*/
 h2 + address {
@@ -47,21 +50,23 @@ h2 ~ blockquote{
     font-size: 25px;
 }
 
-/*pseudo classes*/
+/*pseudo classes
 li:nth-child(2n+1){
     background-color: rgb(239, 225, 230);
 }
-
-#aboutme p:nth-of-type(odd){
+*/
+/* #aboutme p:nth-of-type(odd){
     background-color: rgb(223, 223, 223);
-}
+} */
 
 #aboutme{
     display: flexbox;
     flex-wrap: wrap;
-    padding-inline: 0.8em;
+    padding-inline: 0.2em;
     padding-block: 0;
-    background-color: rgb(245, 202, 224);
+    margin-inline: 0;
+    margin-block: 0;
+    /* background-color: rgb(245, 202, 224); */
 }
 
 a:visited{
@@ -72,9 +77,9 @@ a:hover{
     color: black;
 }
 
-section:not(#testimonials){
+/* section:not(#testimonials){
     font-style: italic;
-}
+} */
 
 
 h2::first-letter{
@@ -96,15 +101,19 @@ a:where(:hover){
 }
 
 main{
+    max-width: clamp(700px,50%,900px);
+    padding-inline: 2rem;
     padding-block: 0;
+    margin-inline: auto;
     margin-block: 0;
-    display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    border: solid 0.1rem black;
+    /* display: grid;
+    grid-template-columns: 50px 1fr 50px; */
 }
 
-main > *{
+/* main > *{
     grid-column: 2;
-}
+} */
 
 .full-bleed{
     grid-column: 1 / span 3;
@@ -197,6 +206,11 @@ input,textarea,select{
 
 #portfolio img{
     max-inline-size: 100%;
+}
+
+#portfolio img:hover{
+    opacity: 50%;
+    transition: opacity 0.2s linear;
 }
 
 #portfolio h2{
