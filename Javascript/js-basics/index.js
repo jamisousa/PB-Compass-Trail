@@ -10,5 +10,18 @@ let ex;                 //undefined
 let example = null; 
 const interestRate = 0.3; //constant
 
-console.log(message);
-console.log(interestRate);
+//working with objects
+let person = {
+    name: 'None',
+    age:0
+};
+
+//Dot notation
+person.age = '1';
+
+//Bracket notation
+let selection ='name';
+person[selection] = "Empty";
+
+console.log(person.name);
+console.log(person.age);
