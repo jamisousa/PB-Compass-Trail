@@ -1,6 +1,8 @@
-/*Starting point
+/*
+
+Starting point
 console.log('Hello World');
-*/
+
 
 //working with variables and constants
 let message = 'Hi';        //string literal
@@ -25,3 +27,17 @@ person[selection] = "Empty";
 
 console.log(person.name);
 console.log(person.age);
+
+*/
+
+//arrays
+let selectedColors = ['red','blue'];
+console.log(selectedColors[0]);
+
+
+//functions
+function greet(name){
+    console.log("hi " + name);
+}
+
+greet("Jamile");
