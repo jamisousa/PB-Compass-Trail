@@ -130,6 +130,21 @@ console.log(allPositive);
 console.log(atLeastOnePositive);
 
 //filtering arrays
-const filtered = nums.filter(value=>value >= 0);
+// const filtered = nums.filter(value=>value >= 0);
 
-console.log(filtered);
+// console.log(filtered);
+
+
+//mapping arrays
+const nbs=[1,-1,2,3];
+const items = numbers.filter(n => n >=0).map(n => {value:n} );
+
+// const items = filtered.map(n => { obj = {value:n};} );
+
+console.log("-----------");
+//console.log(items);
+
+//reducing arrays
+const sum = nbs.reduce((accumulator, currentValue) => accumulator + currentValue);
+
+console.log(sum);
