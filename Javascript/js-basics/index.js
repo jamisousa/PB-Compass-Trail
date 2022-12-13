@@ -41,7 +41,7 @@ function greet(name){
 }
 
 greet("Jamile");
-*/
+
 
 //operators
 let x=10;
@@ -90,7 +90,77 @@ let goodCreditScore = false;
 let eligible = highIncome && goodCreditScore;
 console.log(eligible); //true
 
+*/
+
+//Control flow
+
+//ifelse
+let hour=10;
+
+if(hour >=6 && hour<12){
+    console.log('Good morning');
+
+}else if(hour >= 12 && hour<18){
+    console.log('Good afternoon');
+
+}else{
+    console.log('Good evening');
+
+}
 
 
+//switch
+let role = 'guest';
+
+switch(role){
+    case 'guest':
+        console.log("Guest user");
+        break;
+
+    case 'moderator':
+        console.log("Moderator user");
+        break;
+
+    default:
+        console.log('Unknown User');
+}
 
 
+//loops
+for(let i=0; i<10; i++){
+    console.log('Hi');
+}
+
+let a=0;
+while(a<=5){
+    console.log('Hello');
+    a++;
+}
+
+
+const person={
+    name:'None',
+    age:20
+}
+
+for(let key in person){
+    console.log(key,person[key]);
+}
+
+const colors=['red', 'green','blue'];
+
+for (let index in colors){
+    console.log(index,colors[index]);
+}
+
+let i=0;
+
+while(i<10){
+    if(i%2==0){
+        i++;
+        continue;
+    }
+
+    console.log(i);
+    i++;
+}
