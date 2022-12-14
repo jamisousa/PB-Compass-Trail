@@ -1,15 +1,19 @@
-const numbers=[1,2,3,4,1];
+function countOccurrences(array,search){
+      if(!Array.isArray(array)){
+            throw new Error('Invalid array.');
+      }
 
-const count = countOccurrences(numbers,-1);
+      return array.reduce((accumulator, current)=>{
+            const occurrence = (current == searchElement) ? 1:0;
+            return accumulator + occurrence;
+      },0);
+}
 
-console.log(count);
+try{
+      const numbers=[1,2,3,4,1];
+      const count = countOccurrences(null,1);
+      console.log(count);
 
-function countOccurrences(array,searchElement){
-      let count = 0;
-      for(let element of array){
-            if (element===searchElement){
-                  count++;
-            }
-            return count;
-      };
+} catch(e){
+      console.log(e.message);
 }
