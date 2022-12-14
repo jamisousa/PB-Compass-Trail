@@ -90,7 +90,7 @@ let goodCreditScore = false;
 let eligible = highIncome && goodCreditScore;
 console.log(eligible); //true
 
-*/
+
 
 //Control flow
 
@@ -164,4 +164,130 @@ while(i<10){
     console.log(i);
     i++;
 }
+*/
+
+//Functions
+
+walk(); //no errors
+function walk(){
+    console.log('walk');
+}
+
+//Anonymous Function expression
+
+// run(); retuns run is not defined 
+
+let run = function(){
+    console.log('run');
+};
+
+let move = run;
+run();
+move();
+
+//Arguments
+function sum(){
+    let total=0;
+    for(let value of arguments){
+        total = total + value;
+    }
+    
+    return total;
+}
+
+console.log(sum(1,1,1,1));
+
+
+//Rest operator
+function sumtwo(...args){
+    return args.reduce((a,b)=>a+b);
+}
+
+console.log(sumtwo(1,1,1,1));
+
+//Default parameters
+function interest(principal,rate=3.5,years=5){
+
+    return principal * rate / 100 * years;
+}
+
+console.log(interest(10000, 3.5, undefined));
+
+//Getters and Setters, try and catch
+const person={
+    firstName: 'Jamile',
+    lastName:'Sousa',
+    get fullName(){
+        return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value){
+        if(typeof value !== 'string'){
+            throw new Error('Not a valid name');
+        }
+        const parts = value.split(' ');
+        if(parts.length !==2){
+            throw new Error('Enter a first name and last name');        
+        }
+        this.firstName = parts[0];
+        this.lastName = parts[1];
+    }
+}
+
+try{
+    person.fullName = 'Jamile';
+}
+catch(e){
+    //alert(e);
+}
+
+console.log(person);
+
+/*Local vs Global Scope 
+
+const color = 'red';
+
+function start(){
+    const message = 'hi';
+    const color = 'blue';
+   
+}
+
+function stop(){
+    const message = 'bye';
+}
+
+*/
+
+/* Let vs var
+
+function start(){
+    for(var i =0; i<5; i++){
+        console.log(i);
+    }
+
+    console.log(i);
+
+}
+
+start();
+    
+*/
+
+
+console.log("------Working with this------");
+/*
+This - references the object that is executing the current function
+*/
+const video = {
+    title:'a',
+    tags:['a','b','c','d'],
+    showTags(){
+        this.tags.forEach(function(tag){
+            console.log(this.title,tag);
+        },this);
+    }
+}
+
+video.showTags();
+
 
