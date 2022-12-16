@@ -10,6 +10,7 @@
   "author": "Jamile de Sousa",
   "license": "ISC",
   "dependencies": {
+    "lite-server": "^2.6.1",
     "qs": "^6.11.0"
   }
 }
