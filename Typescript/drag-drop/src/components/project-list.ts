@@ -2,7 +2,7 @@ import {DragTarget} from '../models/drag-drop.js';
 import {Project, ProjectStatus} from '../models/project.js';
 import { Component } from './base-components.js';
 import { autobind } from '../decorators/autobinder.js';
-import { ProjectState, projectState} from '../state/project-state.js';
+import {projectState} from '../state/project-state.js';
 import { ProjectItem } from './project-item.js';
 
         //render the gathered content in a list

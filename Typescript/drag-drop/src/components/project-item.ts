@@ -29,7 +29,7 @@ import { autobind } from '../decorators/autobinder.js';
         event.dataTransfer!.effectAllowed = 'move';
     }
 
-    dragEndHandler(event: DragEvent) {
+    dragEndHandler(_event: DragEvent) {
         console.log('DragEnd');
         
     }
