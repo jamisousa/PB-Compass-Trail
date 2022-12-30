@@ -3,12 +3,13 @@ import styles from './AddUser.module.css';
 import Button from "../UI/Button";
 import React, {useState} from 'react';
 import ErrorModal from "../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 
 function AddUser(props){
 
     const [enteredUsername, setEnteredUsername] = useState('');
     const [enteredAge, setEnteredAge] = useState('');
-     const [error, setError] =  useState();
+    const [error, setError] =  useState();
 
     const addUserHandler = (event) =>{
         event.preventDefault();
@@ -45,9 +46,8 @@ function AddUser(props){
         setEnteredAge(event.target.value);
     };
 
-
     return(
-        <div>
+        <Wrapper>
         {error && <ErrorModal title={error.title} message={error.message} onConfirm={errorHandler}></ErrorModal>}
         <Card className={styles.input}>
             <form onSubmit={addUserHandler}>
@@ -58,7 +58,7 @@ function AddUser(props){
                 <Button type="submit">Add user</Button>
             </form>
         </Card>
-        </div>
+        </Wrapper>
     );
 
 };
