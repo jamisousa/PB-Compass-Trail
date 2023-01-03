@@ -1,13 +1,12 @@
 import React, { useState, useEffect, useReducer, useContext } from 'react';
 import AuthContext from '../../store/auth-context';
 import Card from '../UI/Card/Card';
-import classes from './Login.module.css';
+import styles from './Login.module.css';
 import Button from '../UI/Button/Button';
+import Input from '../UI/Input/Input';
+
 
 const emailReducer = (state, action) => {
-
-  const authCtx = useContext(AuthContext);
-
 
   if(action.type === "USER_INPUT"){
     return {value:action.val, isValid:action.val.includes('@')};
@@ -34,6 +33,8 @@ const Login = (props) => {
   // const [enteredPassword, setEnteredPassword] = useState('');
   // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
+  const authCtx = useContext(AuthContext);
+
 
   //usereducer hook
   const [emailState, dispatchEmail] = useReducer(emailReducer, {
@@ -104,25 +105,12 @@ const Login = (props) => {
   };
 
   return (
-    <Card className={classes.login}>
+    <Card className={styles.login}>
       <form onSubmit={submitHandler}>
+        <input id="email" label="E-mail" type="email" isValid={emailIsValid} value={emailState.value} onChange={emailChangeHandler} onBlur={validateEmailHandler}></input>
         <div
-          className={`${classes.control} ${
-            emailState.isValid === false ? classes.invalid : ''
-          }`}
-        >
-          <label htmlFor="email">E-Mail</label>
-          <input
-            type="email"
-            id="email"
-            value={emailState.value}
-            onChange={emailChangeHandler}
-            onBlur={validateEmailHandler}
-          />
-        </div>
-        <div
-          className={`${classes.control} ${
-            passwordState.isValid === false ? classes.invalid : ''
+          className={`${styles.control} ${
+            passwordState.isValid === false ? styles.invalid : ''
           }`}
         >
           <label htmlFor="password">Password</label>
@@ -134,8 +122,8 @@ const Login = (props) => {
             onBlur={validatePasswordHandler}
           />
         </div>
-        <div className={classes.actions}>
-          <Button type="submit" className={classes.btn} disabled={!formIsValid}>
+        <div className={styles.actions}>
+          <Button type="submit" className={styles.btn} disabled={!formIsValid}>
             Login
           </Button>
         </div>
