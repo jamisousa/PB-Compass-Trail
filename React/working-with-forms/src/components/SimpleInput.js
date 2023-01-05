@@ -51,15 +51,18 @@ const SimpleInput = (props) => {
   };
 
   const nameInputClasses = nameInputIsInvalid ? 'form-control invalid' : 'form-control';
+  const emailInputClasses = emailInputIsInvalid ? 'form-control invalid' : 'form-control';
 
   return (
     <form onSubmit={formSubmissionHandler}>
       <div className={nameInputClasses}>
         <label htmlFor='name'>Your Name</label>
         <input value={enteredName} type='text' id='name' onChange={nameInputChangeHandler} onBlur={nameInputBlurHandler} />
-        <label htmlFor='email'>Your Email</label>
-        <input value={enteredEmail} type='email' id='email' onChange={emailInputChangeHandler} onBlur={emailInputBlurHandler} />
         {nameInputIsInvalid && <p>Name must not be empty!</p>}
+      </div>
+      <div className={emailInputClasses}>
+      <label htmlFor='email'>Your Email</label>
+        <input value={enteredEmail} type='email' id='email' onChange={emailInputChangeHandler} onBlur={emailInputBlurHandler} />
         {emailInputIsInvalid && <p>Email is not valid.</p>}
       </div>
       <div className="form-actions">
