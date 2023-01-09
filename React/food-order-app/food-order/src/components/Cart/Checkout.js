@@ -16,8 +16,6 @@ const Checkout = (props) => {
     postalCode: true
   });
 
-
-
     const nameInputRef = useRef();
     const streetInputRef = useRef();
     const postalInputRef = useRef();
@@ -50,6 +48,12 @@ const Checkout = (props) => {
       return;
     }
     //submit cart data
+    props.onConfirm({
+      name: enteredName,
+      street: enteredStreet,
+      city: enteredCity,
+      postalCode: enteredPostal
+    });
 
   };
 
@@ -66,12 +70,12 @@ const Checkout = (props) => {
         <input type='text' id='name' ref={nameInputRef} />
         {!formInputValidity.name && <p>Enter a valid name.</p>}
       </div>
-      <div className={cityControlClasses}>
+      <div className={streetControlClasses}>
         <label htmlFor='street'>Street</label>
         <input type='text' id='street' ref={streetInputRef} />
         {!formInputValidity.street && <p>Enter a valid street.</p>}
       </div>
-      <div className={styles.control}>
+      <div className={postalControlClasses}>
         <label htmlFor='postal'>Postal Code</label>
         <input type='text' id='postal' ref={postalInputRef} />
         {!formInputValidity.postalCode && <p>Enter a valid postal code.</p>}
