@@ -13,7 +13,6 @@ const MONGO_URI =
   ":" +
   process.env.PASSWORD +
   "@cluster0.eymeia2.mongodb.net/?retryWrites=true&w=majority";
-
 if (!MONGO_URI) {
   throw new Error("You must provide a MongoLab URI");
 }
